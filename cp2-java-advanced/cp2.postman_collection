@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "85651233-344a-4ac7-b268-3d8d165aae12",
+		"name": "SimuladoCP2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "665263"
+	},
+	"item": [
+		{
+			"name": "api/pessoa (Criar Pessoa)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Leonardo\",\r\n    \"email\": \"leonardo@ninjaturtle.com\",\r\n    \"fones\": [\r\n        {\r\n            \"numero\": \"123456789\"\r\n        },\r\n        {\r\n            \"numero\": \"987654321\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pessoa/{id} (Obter Pessoa por ID)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pessoa/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoa",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pessoa/{id} (Atualizar Pessoa)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Rafael\",\r\n    \"email\": \"rafael@ninjaturtle.com\",\r\n    \"fones\": [\r\n        {\r\n            \"numero\": \"555555555\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pessoa/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoa",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pessoa/{id} (Excluir Pessoa)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pessoa/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoa",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pessoa (Listar Todas as Pessoas)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pessoa/findByNome/{nome} (Buscar por Nome - JPQL)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pessoa/findByNome/Leonardo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoa",
+						"findByNome",
+						"Leonardo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pessoa/findByNomeNative/{nome} (Buscar por Nome - SQL Nativo)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pessoa/findByNomeNative/Rafael",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoa",
+						"findByNomeNative",
+						"Rafael"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pessoa/{id}/fones (Fones Paginados por Pessoa)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pessoa/1/fones?page=0&size=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoa",
+						"1",
+						"fones"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
